@@ -12,9 +12,10 @@ WiFiClient client;
 BH1750 lightMeter;
 
 // Define constants for IFTTT server communication
-char HOST_NAME[] = "maker.ifttt.com";
-String PATH_NAME  = "/trigger/lightsensor/with/key/dcJl9S4EQ_As8TCSrLZ63CyopDnr7hj-9TlYNMhkag";
-String queryString = "?value1=57&value2=25"; 
+char HOST_NAME[] = "maker.ifttt.com";  // IFTTT server hostname
+String PATH_NAME  = "/trigger/lightsensor/with/key/dcJl9S4EQ_As8TCSrLZ63CyopDnr7hj-9TlYNMhkag"; // Path for triggering the IFTTT event, including the unique key
+String queryString = "?value1=0&value2=0"; // Query string parameters to send along with the request, representing sensor values
+
 
 void setup() {
   // Initialize serial communication at 9600 bps
